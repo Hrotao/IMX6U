@@ -15,14 +15,12 @@ $(NAME).bin:$(OBJS)
 
 %.o:%.s
 	$(CC) -Wall -nostdlib -c -O2 -o $@ $<
-	
+
 %.o:%.S
 	$(CC) -Wall -nostdlib -c -O2 -o $@ $<
-	
+
 %.o:%.c
 	$(CC) -Wall -nostdlib -c -O2 -o $@ $<
-	
+
 clean:
 	rm -rf *.o $(NAME).bin $(NAME).elf $(NAME).dis
-	
-	
